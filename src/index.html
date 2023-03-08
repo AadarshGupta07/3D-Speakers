@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreeJS Starter</title>
+    <style>
+        #button {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        background-color: aliceblue;
+        color: black;
+        letter-spacing: 0.08rem;
+        padding-block: 0.6rem;
+        padding-inline: 2rem;
+    }
+    </style>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+
+    <button id="button">PLAY</button>
+
+    <video id="video" crossorigin="anonymous" style="display: none; pointer-events: none;"
+        type="video/mp4"
+        loop
+        src="../static/c.mp4" controls="false" autoplay="true">
+</video>
+</body>
+</html>
