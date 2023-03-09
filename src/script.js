@@ -91,7 +91,7 @@ bakedTexture.encoding = THREE.sRGBEncoding
 
 
 /**
- *  Material
+ *  Baked Material
  */
 const bakedMaterial = new THREE.MeshStandardMaterial({ map: bakedTexture })
 
@@ -167,7 +167,8 @@ const audioLoader = new THREE.AudioLoader();
 let isPlayingSong = false;
 let sound;
 let playButton = document.getElementById('button')
-let songs = ['background.mp3', 'm2']
+
+// Audio Loader
 audioLoader.load('m2.mp3', function (buffer) {
     sound = new THREE.PositionalAudio(listener);
     sound.setBuffer(buffer);
@@ -259,7 +260,8 @@ const tick = () => {
 
         intersects.length ? currentIntersect = intersects[0] : currentIntersect = null
     }
-
+    
+    // When Model is Fully Loaded
     if(model){
 
         // group.rotation.y = elapsedTime 
